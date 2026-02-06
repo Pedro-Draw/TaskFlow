@@ -1,15 +1,12 @@
-import { Moon, Sun } from 'lucide-react'
-import { useState } from 'react'
+import { Moon, Sun } from 'lucide-react';
 
-export default function ThemeToggle() {
-  const [dark, setDark] = useState(true)
-
+export default function ThemeToggle({ darkMode, setDarkMode }) {
   return (
     <button
-      onClick={() => setDark(!dark)}
+      onClick={() => setDarkMode(!darkMode)}
       className="p-2 rounded-lg bg-neutral-800 hover:bg-neutral-700"
     >
-      {dark ? <Sun size={16} /> : <Moon size={16} />}
+      {darkMode ? <Sun size={16} /> : <Moon size={16} />}
     </button>
-  )
+  );
 }

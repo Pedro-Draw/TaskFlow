@@ -1,14 +1,16 @@
 import { Link, useLocation } from "react-router-dom";
+import { useI18n } from "../i18n/I18nContext";
 
 export default function Sidebar({ open, setOpen }) {
   const location = useLocation();
+  const { t } = useI18n();
 
   const menu = [
-    { name: "Dashboard", path: "/dashboard" },
-    { name: "Tasks", path: "/board" },
-    { name: "Calendar", path: "/calendar" },
-    { name: "Reports", path: "/reports" },
-    { name: "Settings", path: "/settings" },
+    { name: t("sidebar.dashboard"), path: "/dashboard" },
+    { name: t("sidebar.tasks"), path: "/board" },
+    { name: t("sidebar.calendar"), path: "/calendar" },
+    { name: t("sidebar.reports"), path: "/reports" },
+    { name: t("sidebar.settings"), path: "/settings" },
   ];
 
   return (
@@ -25,7 +27,7 @@ export default function Sidebar({ open, setOpen }) {
           open ? "translate-x-0" : "-translate-x-full sm:translate-x-0"
         }`}
       >
-        <h1 className="text-xl font-bold mb-6">NÉ</h1>
+        <h1 className="text-xl font-bold mb-6">TaskFlow</h1>
 
         <nav className="space-y-2">
           {menu.map((item) => (
@@ -42,14 +44,6 @@ export default function Sidebar({ open, setOpen }) {
           ))}
         </nav>
       </aside>
-
-      {/* Botão flutuante mobile  nao ativr pois ja tenho um que controla no lugar certo no arquivo topbar.jsx*/}
-      {/* <button
-        className="sm:hidden fixed bottom-5 left-5 z-50 bg-white text-black rounded-full w-14 h-14 text-2xl shadow-lg"
-        onClick={() => setOpen(true)}
-      >
-        ☰
-      </button> */}
     </>
   );
 }

@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes slideDown {
+    0% {
+        transform: translate(-50%, -20px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(-50%, 0);
+        opacity: 1;
+    }
+}
+
+.animate-slideDown {
+    animation: slideDown 0.3s ease-out;
+}
+
 /* Reset e base */
 html,
 body,
@@ -9,7 +25,6 @@ body,
     width: 100%;
     height: 100%;
     overflow-x: hidden;
-    background-color: black;
 }
 
 /* Tipografia base */
