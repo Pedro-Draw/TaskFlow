@@ -1,0 +1,133 @@
+vamos para a parte 2 agora, a primeira fase jafoi concluida. quais arquivos voce precisa ver para me mandar coretamnte com o ajustes inclysos?
+
+certo, entao vamos seguir essa ordem e ja  aproveita e add os pop ups personalizados de acordo, flutuantes na parte superior da tela e centralizado:
+
+✅ 1️⃣ MELHOR ORDEM PARA ADICIONAR OS AJUSTES
+
+A ordem correta é essa (pra não quebrar nada depois):
+
+🔹 FASE 1 — Responsividade & UX
+
+✔ Ajustar layout para:
+
+Mobile 📱
+
+Tablet 📲
+
+Desktop 🖥
+
+Touch (cliques grandes, espaçamento, scroll correto)
+
+➡ Aqui entra:
+
+Grid com Tailwind (grid, flex, gap, min-h-screen)
+
+Sidebar colapsável no mobile
+
+Botão flutuante para abrir menu
+
+🔹 FASE 2 — Funcionalidade
+
+✔ Fazer todos os botões funcionarem:
+
+Search filtrar tarefas
+
+Add Task abrir modal
+
+Salvar / editar / deletar tarefas
+
+Dark / Light Theme funcionando
+
+LocalStorage para salvar dados
+
+🔹 FASE 3 — Idiomas (i18n)
+
+✔ Criar sistema de idiomas:
+
+🇧🇷 Português
+
+🇺🇸 Inglês
+
+🇪🇸 Espanhol
+
+➡ Tudo que é texto vira:
+
+t("dashboard.title")
+
+
+E muda conforme o idioma selecionado no Settings.
+
+🔹 FASE 4 — Usuário & Autenticação
+
+✔ Criar:
+
+Tela de Login
+
+Criar Conta
+
+Esqueci senha
+
+CPF + senha para login
+
+Conta master fixa no código
+
+✔ Tela de Settings com:
+
+Foto de perfil
+
+Nome, email, CPF
+
+Trocar senha
+
+Cancelar / salvar edição
+
+🔹 FASE 5 — Refinos finais
+
+✔ Sidebar ocultável com botão flutuante
+✔ Animações leves
+✔ Feedback visual (loading, sucesso, erro)
+
+
+
+
+
+
+
+me mande os arquivos completos com esses ajuste incluidos.
+
+
+seguindo nessa ordem
+
+
+
+minha estrutura esta assim:
+
+scrum-board-app/
+├─ index.html
+├─ package.json
+├─ vite.config.js
+├─ tailwind.config.js
+├─ postcss.config.js
+├─ /src
+│  ├─ main.jsx
+│  ├─ App.jsx
+│  ├─ index.css
+│  ├─ /components
+│  │   ├─ Sidebar.jsx
+│  │   ├─ Topbar.jsx
+│  │   ├─ Column.jsx
+│  │   ├─ TaskCard.jsx
+│  │   ├─ TaskModal.jsx
+│  │   ├─ ThemeToggle.jsx
+│  │   ├─ DashboardStats.jsx
+│  │   └─ CalendarView.jsx
+│  ├─ /pages
+│  │   ├─ Dashboard.jsx
+│  │   ├─ Board.jsx
+│  │   ├─ Calendar.jsx
+│  │   ├─ Reports.jsx
+│  │   └─ Settings.jsx
+│  ├─ /hooks
+│  │   └─ useLocalStorage.js
+│  └─ /utils
+│      └─ taskHelpers.js
